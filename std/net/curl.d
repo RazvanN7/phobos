@@ -2050,11 +2050,10 @@ private mixin template Protocol()
     /**
        Set the no proxy flag for the specified host names.
        Params:
-       test = a list of comma separated list of host names that
-              do not require proxy to get reached
+       test = a list of comma host names that do not require
+              proxy to get reached
     */
-
-    @property void setNoProxy(string hosts)
+    void setNoProxy(string hosts)
     {
         p.curl.set(CurlOption.noproxy, hosts);
     }
